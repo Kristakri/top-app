@@ -1,0 +1,74 @@
+.menu {
+}
+
+.firstLevel {
+	display: grid;
+	align-items: center;
+
+	margin-top: 20px;
+
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 25px;
+	grid-template-columns: 24px 1fr;
+	gap: 20px;
+}
+
+.secondBlock {
+	margin-top: 15px;
+	margin-left: 12px;
+	padding-left: 32px;
+
+	border-left: 1px solid #DFDFDF;
+}
+
+.secondLevelBlock {
+	display: none;
+}
+
+.secondLevelBlockOpened {
+	display: block;
+}
+
+.secondLevel {
+	margin-bottom: 10px;
+
+	cursor: pointer;
+	text-transform: uppercase;
+
+	color: var(--gray-dark);
+
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 16px;
+}
+
+.secondBlockOpened:last-child {
+	margin-bottom: 20px;
+}
+
+.thirtLevel {
+	display: block;
+
+	margin-bottom: 10px;
+
+	cursor: pointer;
+
+	color: var(--gray-dark);
+
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 19px;
+}
+
+.firstLevel:hover,
+.thirtLevel:hover {
+	transition: var(--animation);
+
+	color: var(--primary);
+}
+
+.firstLevelActive,
+.thirtLevelActive {
+	color: var(--primary);
+}
