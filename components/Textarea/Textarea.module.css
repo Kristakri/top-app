@@ -1,3 +1,9 @@
+.textareaWrapper {
+	position: relative;
+
+	width: 100%;
+}
+
 .textarea {
 	min-width: 100%;
 	max-width: 100%;
@@ -5,6 +11,8 @@
 	min-height: 76px;
 	max-height: 152px;
 	padding: 7px 15px;
+
+	resize: none;
 
 	color: var(--black);
 	border: none;
@@ -21,4 +29,18 @@
 
 .textarea::placeholder {
 	color: #A4A4A4;
+}
+
+.error {
+	border: 1px solid var(--red);
+}
+
+.errorMessage {
+	position: absolute;
+	bottom: -15px;
+	left: 0;
+
+	color: var(--red);
+
+	font-size: 0.9em;
 }

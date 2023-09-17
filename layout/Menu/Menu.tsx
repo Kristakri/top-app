@@ -47,7 +47,7 @@ export const Menu = ():JSX.Element => {
       <div className={styles.secondBlock}>
         {menu.map(m => {
           if(m.pages.map(p => p.alias).includes(router.asPath.split('/')[2])) {
-            m.isOpened = !m.isOpened;
+            m.isOpened = true;
           }
 
           return (
@@ -68,7 +68,7 @@ export const Menu = ():JSX.Element => {
   const buildThirdLevel = (pages: PageItem[], route: string) => {
     return (
       pages.map(p => (
-        <Link href={`/${route}/${p.alias}`}>
+        <Link href={`/${route}/${p.alias}`} key={p._id }>
           <a className={cn(styles.thirtLevel, {
             [styles.thirtLevelActive]: `/${route}/${p.alias}` == router.asPath
           })}>{p.category}</a>

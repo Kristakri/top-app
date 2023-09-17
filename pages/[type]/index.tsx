@@ -2,6 +2,7 @@ import { GetStaticProps } from "next";
 import axios from "axios";
 import { MenuItem } from "../../interfaces/menu.interface";
 import { withLayout } from "../../layout/Layout";
+import { API } from "../../helpers/api";
 
 function Cources({menu, firstCategory}: CourcesProps): JSX.Element {
   return (
@@ -15,7 +16,7 @@ export default withLayout(Cources);
 
 export const getStaticProps: GetStaticProps<CourcesProps> = async () => {
 	const firstCategory = 0;
-	const { data: menu } = await axios.post<MenuItem[]>(process.env.NEXT_PUBLIC_DOMAIN + "/api/top-page/find", {
+	const { data: menu } = await axios.post<MenuItem[]>(API.topPage.find, {
 		firstCategory
 	});
 	return {

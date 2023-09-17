@@ -1,9 +1,12 @@
 import { RatingProps } from "./RatingProps";
 import styles from "./Rating.module.css";
 import cn from "classnames";
-import { useEffect, useState,KeyboardEvent } from "react";
+import { useEffect, useState,KeyboardEvent, forwardRef, ForwardedRef } from "react";
 
-export const Rating = ({isEditable = false, rating, setRating, ...props}: RatingProps):JSX.Element => {
+export const Rating = forwardRef((
+    {isEditable = false, rating, setRating, error, className, ...props}: RatingProps, 
+    ref: ForwardedRef<HTMLDivElement>
+  ):JSX.Element => {
   const [ratingArray, setRatingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>));
 
   useEffect(() => {
@@ -52,9 +55,14 @@ export const Rating = ({isEditable = false, rating, setRating, ...props}: Rating
 
   return (
     <div
+      ref={ref}
+      className={cn({
+				[styles.error]: error
+			})}
       {...props}
     >
       {ratingArray.map((r, i) => (<span key={i}>{r}</span>))}
+      {error && <span className={styles.errorMessage}>{error.message}</span>}
     </div>
  );
-};
+});

@@ -5,15 +5,19 @@ import { H, Tag, Card, Advantages, Skills, P, Sort, Product } from "../../compon
 import { HhData } from "../../components/HhData/HhData";
 import { TopLevelCategory } from "../../interfaces/page.intarface";
 import { SortEnum } from "../../components/Sort/SortProps";
-import { useReducer } from 'react';
+import { useEffect, useReducer } from 'react';
 import { sortReducer } from './sort.reducer';
 
 export const TopPageComponent = ({ page, products, firstCategory }: TopPageComponentProps):JSX.Element => {
   const [{ products: sortedProducts, sort }, dispathSort] = useReducer(sortReducer, {products, sort: SortEnum.Rating });
-
+  
   const setSort = (sort: SortEnum) => {
     dispathSort({type: sort});
-  }
+  };
+
+  useEffect(() => {
+    dispathSort({type: "reset", initialState: products})
+  }, [products]);
 
   return (
     <div className={styles.wrapper}>

@@ -1,3 +1,26 @@
+.error {
+	position: relative;
+
+	text-shadow:
+		1px 0 0 var(--red),
+		-1px 0 0 var(--red),
+		0 1px 0 var(--red),
+		0 -1px 0 var(--red);
+}
+
+.errorMessage {
+	position: absolute;
+	right: 0;
+	bottom: -20px;
+
+	white-space: nowrap;
+
+	color: var(--red);
+	text-shadow: none;
+
+	font-size: 0.9em;
+}
+
 .star {
 	color: #E2E2E2;
 }
