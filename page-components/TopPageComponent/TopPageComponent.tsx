@@ -11,7 +11,6 @@ import { useScrollY } from "../../hooks/useScrollY";
 
 export const TopPageComponent = ({ page, products, firstCategory }: TopPageComponentProps):JSX.Element => {
   const [{ products: sortedProducts, sort }, dispathSort] = useReducer(sortReducer, {products, sort: SortEnum.Rating });
-  const y = useScrollY();
   
   const setSort = (sort: SortEnum) => {
     dispathSort({type: sort});

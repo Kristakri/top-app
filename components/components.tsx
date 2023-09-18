@@ -1,6 +1,7 @@
 export * from "./H/H";
 export * from "./P/P";
 export * from "./Button/Button";
+export * from "./ButtonIcon/ButtonIcon";
 export * from "./Tag/Tag";
 export * from "./Rating/Rating";
 export * from "./Card/Card";

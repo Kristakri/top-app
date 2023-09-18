@@ -3,6 +3,7 @@ import { useScrollY } from "../../hooks/useScrollY";
 import styles from "./Up.module.css";
 import cn from "classnames";
 import { useEffect } from "react";
+import { ButtonIcon } from "../components";
 
 export const Up = ():JSX.Element => {
   const controls = useAnimation();
@@ -24,13 +25,13 @@ export const Up = ():JSX.Element => {
   };
 
   return (
-    <motion.button 
+    <motion.div 
       animate={controls}
       className={styles.up} 
       onClick={() => scrollToTop()}
       initial={{opacity: 0, transform: 'translateY(20px)'}}
     >
-      <span className={cn("material-symbols-outlined", styles.upArrow)}>expand_less</span>
-    </motion.button>
+      <ButtonIcon appearance="primary" icon="expand_less" />
+    </motion.div>
   );
 };

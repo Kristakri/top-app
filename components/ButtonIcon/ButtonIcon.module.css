@@ -1,0 +1,26 @@
+.button {
+	border-radius: 10px;
+	cursor: pointer;
+	border: none;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+	transition: transform var(--animation);
+}
+
+.button:hover {
+	transform: scale(1.05);
+}
+
+.primary {
+	background: var(--primary);
+	color: var(--white);
+}
+
+.white {
+	background: var(--white);
+	color: var(--primary);
+}
+
+.buttonIcon {
+	font-size: 40px;
+	line-height: 40px;
+}
