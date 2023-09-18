@@ -16,7 +16,7 @@ export const TopPageComponent = ({ page, products, firstCategory }: TopPageCompo
   };
 
   useEffect(() => {
-    dispathSort({type: "reset", initialState: products})
+    dispathSort({type: "reset", initialState: products});
   }, [products]);
 
   return (
@@ -27,7 +27,7 @@ export const TopPageComponent = ({ page, products, firstCategory }: TopPageCompo
         <Sort sort={sort} setSort={setSort} />
       </div>
       <div>
-      {sortedProducts && sortedProducts.map(p => (<Product key={p._id} product={p}/>))}
+      {sortedProducts && sortedProducts.map(p => (<Product layout key={p._id} product={p}/>))}
       </div>
       <div className={styles.hhTitle}>
         <H tag="h2">Вакансии - {page.category}</H>
