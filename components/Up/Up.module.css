@@ -1,0 +1,21 @@
+.up {
+	border-radius: 10px;
+	background: var(--primary);
+	color: var(--white);
+	cursor: pointer;
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	border: none;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+	transition: transform var(--animation);
+}
+
+.up:hover {
+	transform: scale(1.05);
+}
+
+.upArrow {
+	font-size: 40px;
+	line-height: 40px;
+}
