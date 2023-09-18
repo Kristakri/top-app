@@ -153,25 +153,11 @@
 }
 
 .reviews {
-	transition: var(--animation);
-}
-
-.closed {
 	overflow: hidden;
-
-	max-height: 0;
-	padding: 0 30px;
-
-	opacity: 0;
 }
 
-.opened {
-	overflow: visible;
-
-	max-height: auto;
+.reviewsCard {
 	padding: 30px;
-
-	opacity: 1;
 }
 
 @media screen and (max-width: 1320px) {
