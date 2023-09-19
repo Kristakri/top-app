@@ -141,7 +141,7 @@
 }
 
 .advantages::before {
-	background: var(--green-dark);
+	background: #1DC37E;
 }
 
 .disadvantages::before {
