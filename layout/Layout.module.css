@@ -12,14 +12,17 @@
 }
 
 .skipLink {
-	display: block;
 	position: fixed;
-	left: 100px;
 	top: 0;
+	left: 100px;
+
+	display: block;
 	overflow: hidden;
+
 	height: 0;
-	background: var(--primary);
+
 	color: var(--white);
+	background: var(--primary);
 }
 
 .displayed {
@@ -34,6 +37,7 @@
 
 .main {
 	grid-area: main;
+
 	outline: none;
 }
 

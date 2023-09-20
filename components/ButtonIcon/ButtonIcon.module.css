@@ -1,9 +1,10 @@
 .button {
-	border-radius: 10px;
 	cursor: pointer;
-	border: none;
-	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
 	transition: transform var(--animation);
+
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
 }
 
 .button:hover {
@@ -11,13 +12,13 @@
 }
 
 .primary {
-	background: var(--primary);
 	color: var(--white);
+	background: var(--primary);
 }
 
 .white {
-	background: var(--white);
 	color: var(--primary);
+	background: var(--white);
 }
 
 .buttonIcon {

@@ -22,14 +22,14 @@ a {
 :root {
 	--black: #3B434E;
 	--white: white;
-	--primary:#7351F5;
-	--primary-hover: #4d21fd;
+	--primary: #7351F5;
+	--primary-hover: #4D21FD;
 	--gray-ligth: #EBEBEB;
 	--gray: #B3C0D9;
-	--gray-dark: #6c7077;
+	--gray-dark: #6C7077;
 	--red: #FC836D;
 	--red-light: #FFCBC2;
-	--green-dark: #007a48;
+	--green-dark: #007A48;
 	--green-ligth: #C8F8E4;
 	--font-family: 'Noto Sans', sans-serif;
 	--animation: 0.2s;

@@ -40,8 +40,9 @@
 .arrow {
 	margin-left: 10px;
 
-	font-size: 11px;
 	transition: transform var(--animation);
+
+	font-size: 11px;
 }
 
 .down {
